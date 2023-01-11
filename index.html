@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+    <title>Truth Table Generator</title>
+</head>
+<body>
+    <h1 class="header">Truth Table Generator</h1>
+    <div class="mainGrid">
+        <div class="tableSet">
+            <div class="tableControls">
+                <button>2 variables</button>
+                <button>3 variables</button>
+                <button>4 variables</button>
+            </div>
+            <div class="tableContainer">
+                <table class="mainTable" id="table">
+                    <tr class="tableHeaders">
+                        <th>p</th>
+                        <th>q</th> 
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <fieldset class="expressionControls">
+            <legend>New Expression</legend>
+            <input type="text" id="exprIn" placeholder="expression">
+            <div class="expressionButtons">
+                
+                <button onclick="">(</button> 
+                <button onclick="">)</button>
+                <button onclick="">and</button> 
+                <button onclick="">or</button>
+                <button onclick="">xor</button>
+                <button onclick="">not</button>
+                <button onclick="">if only if</button>
+                <button onclick="">implies</button>
+            </div>
+            <button onclick="">Add</button>
+        </fieldset>
+
+        <div class="infoBlock">
+            <h3>Instructions</h3>
+            <p>Operators:</p>
+            <ul>
+                <li>! - not</li>
+                <li>^ - and</li>
+                <li>v - or</li>
+                <li>* - xor</li>
+                <li>= - if only if</li>
+                <li>> - implies</li>
+            </ul>
+            <p>Type out these characters, or use the buttons underneath the expression box</p>
+            <p>Use parentheses and variables p, q, r, and s in expression</p>
+            <p>Note: the 'implies' operator currently has the lowest precedence due to a bug, please use parantheses to specify 
+                parts of you expression when using the '>' operator
+            </p>
+        </div>
+    </div>
+    
+</body>
+<footer>&copy; Eric Buchanan - 2023</footer>
+</html>
