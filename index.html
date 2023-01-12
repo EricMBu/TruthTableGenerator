@@ -13,17 +13,18 @@
     <div class="mainGrid">
         <div class="tableSet">
             <div class="tableControls">
-                <button>2 variables</button>
-                <button>3 variables</button>
-                <button>4 variables</button>
+                <button onclick="TwoVarSet()">2 variables</button>
+                <button onclick="ThreeVarSet()">3 variables</button>
+                <button onclick="FourVarSet()">4 variables</button>
+                <button onclick="ClearTable()">Clear</button>
             </div>
             <div class="tableContainer">
                 <table class="mainTable" id="table">
                     <tr class="tableHeaders">
-                        <th>p</th>
-                        <th>q</th> 
+                        <!-- <th>p</th>
+                        <th>q</th>  -->
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>0</td>
                         <td>0</td>
                     </tr>
@@ -38,7 +39,7 @@
                     <tr>
                         <td>1</td>
                         <td>1</td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
@@ -74,7 +75,7 @@
             <p>Type out these characters, or use the buttons underneath the expression box</p>
             <p>Use parentheses and variables p, q, r, and s in expression</p>
             <p>Note: the 'implies' operator currently has the lowest precedence due to a bug, please use parantheses to specify 
-                parts of you expression when using the '>' operator
+                parts of your expression when using the '>' operator
             </p>
         </div>
     </div>
