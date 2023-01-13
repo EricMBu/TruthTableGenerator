@@ -3,6 +3,8 @@ varNum = 0;
 vars = ["p","q","r","s"]
 const operands = ['^','v','*','=']
 const jsOps = ["&&", "||", "^", "==="]
+const typedSymbols = ['^','v','*','=','>','!']
+const logicSymbols = ["∧","∨","⊕","↔",'→','¬']
 var columns = 2 //disintegrate this later
 let expressions = []
 
@@ -147,7 +149,7 @@ function AddExpression(){
         let test = EvaluateExpression(expression, vars.slice(0,varNum), firstRowContent)
 
         //continues if test is successful
-        AddColumn(exprText)
+        AddColumn(ReplaceCharacters(exprText))
         for (var i = 1; i < table.rows.length; i++){
             var row = table.rows[i]
             var rowSize = row.cells.length
@@ -256,4 +258,11 @@ function ArrReplaceAll(arrIn, elem1, elem2){
 
 function TypeCharacter(char){
     document.getElementById("exprIn").value += char;
+}
+
+function ReplaceCharacters(strIn){
+    for (i in typedSymbols){
+        strIn = strIn.replaceAll(typedSymbols[i], logicSymbols[i])
+    }
+    return strIn
 }
