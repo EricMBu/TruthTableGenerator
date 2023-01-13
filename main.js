@@ -260,6 +260,11 @@ function TypeCharacter(char){
     document.getElementById("exprIn").value += char;
 }
 
+function Backspace(){
+    let text = document.getElementById("exprIn").value
+    document.getElementById("exprIn").value = text.slice(0, (text.length - 1))
+}
+
 function ReplaceCharacters(strIn){
     for (i in typedSymbols){
         strIn = strIn.replaceAll(typedSymbols[i], logicSymbols[i])

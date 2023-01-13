@@ -3,7 +3,9 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(96, 173, 192); ;
     width: 500px;  
-    margin-left: 500px; 
+    /* margin-left: 500px;  */
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 25px;
     border-radius: 10px;
     text-shadow: 1px 1px 3px black;
@@ -15,11 +17,12 @@ body{
     
     border-radius: 10px;
     background-color: aliceblue;
-    width: 1500px;
     margin: auto;
 }
 html{
-    background-color: rgb(96, 173, 192);    
+    background-color: rgb(96, 173, 192);
+    margin-left: 30px;    
+    margin-right: 30px;  
 }
 .mainGrid{
     display: grid;
@@ -79,4 +82,16 @@ td{
 footer{
     text-align: center;
     margin-top: 30px;
+}
+
+@media only screen and (max-width: 700px){
+    .mainGrid{
+        grid-template-columns: 1fr; 
+    }
+    .tableSet{
+        margin-bottom: 20px;
+    }
+    .header{
+        width: auto;
+    }
 }
