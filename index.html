@@ -28,19 +28,19 @@
         
         <fieldset class="expressionControls">
             <legend>New Expression</legend>
-            <input type="text" id="exprIn" placeholder="expression">
+            <input type="text" id="exprIn" placeholder="expression" 
+            oninput="TrimCharacters(this)">
             <div class="expressionButtons">
-                
-                <button onclick="">(</button> 
-                <button onclick="">)</button>
-                <button onclick="">and</button> 
-                <button onclick="">or</button>
-                <button onclick="">xor</button>
-                <button onclick="">not</button>
-                <button onclick="">if only if</button>
-                <button onclick="">implies</button>
+                <button onclick="TypeCharacter('\(')">(</button>
+                <button onclick="TypeCharacter('\)')">)</button>
+                <button onclick="TypeCharacter('^')">and</button> 
+                <button onclick="TypeCharacter('v')">or</button>
+                <button onclick="TypeCharacter('*')">xor</button>
+                <button onclick="TypeCharacter('!')">not</button>
+                <button onclick="TypeCharacter('=')">if only if</button>
+                <button onclick="TypeCharacter('>')">implies</button>
             </div>
-            <button onclick="">Add</button>
+            <button onclick="AddExpression()">Add</button>
         </fieldset>
 
         <div class="infoBlock">
