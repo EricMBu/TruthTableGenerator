@@ -22,8 +22,8 @@ function TwoVarSet(){
     // create rows
     for(var i = 0; i <= 1; i++){
         for(var n = 0; n <= 1; n++){
-            AddSingleCell(i)
-            AddSingleCell(n)
+            AddSingleCell(Math.abs(i-1))
+            AddSingleCell(Math.abs(n-1))
         }
     }
 }
@@ -40,9 +40,9 @@ function ThreeVarSet(){
     for(var i = 0; i <= 1; i++){        
         for(var n = 0; n <= 1; n++){
             for(var k = 0; k <= 1; k++){
-                AddSingleCell(i)
-                AddSingleCell(n)
-                AddSingleCell(k)
+                AddSingleCell(Math.abs(i-1))
+                AddSingleCell(Math.abs(n-1))
+                AddSingleCell(Math.abs(k-1))
             }
         }
     }
@@ -61,10 +61,10 @@ function FourVarSet(){
         for(var n = 0; n <= 1; n++){
             for(var k = 0; k <= 1; k++){
                 for(var l = 0; l <= 1; l++){
-                    AddSingleCell(i)
-                    AddSingleCell(n)
-                    AddSingleCell(k)
-                    AddSingleCell(l)
+                    AddSingleCell(Math.abs(i-1))
+                    AddSingleCell(Math.abs(n-1))
+                    AddSingleCell(Math.abs(k-1))
+                    AddSingleCell(Math.abs(l-1))
                 }   
             }
         }
